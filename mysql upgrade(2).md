@@ -5,7 +5,7 @@
 第三步：运行MySQL的卸载程序，可以使用360或者QQ电脑管理的软件管理，或者是控制面板程序里面执行卸载。
 
 第四步：进入mysql官网 https://dev.mysql.com/downloads/installer/ 选择下载：mysql-installer-community-5.7.20.0.msi
-
+![](https://github.com/Huangqianqan/java-/blob/master/photograph/1256341-20171119151350827-838808899.png)
 
 第五步：选择custom安装server：
 
