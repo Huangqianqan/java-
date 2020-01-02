@@ -47,7 +47,7 @@ mysqldump备份
 
 
 格式：mysqldump -h主机名 -P端口 -u用户名 -p密码 --all-databases > 文件名.sql
-
+或：mysqldump -uroot -p  -A >d:/data/backup/all_db.sql（cmd直接输入命令，不用进入mysql。储存在d:盘）
 
 例如：mysqldump -h192.168.1.100 -p3306 -uroot -ppassword --all-databases > /data/backup/all_db.sql
 
