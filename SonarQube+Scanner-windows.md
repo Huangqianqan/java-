@@ -1,5 +1,6 @@
 1.概论：SonarQube是管理代码质量一个开放平台，可以快速的定位代码中潜在的或者明显的错误，下面将会介绍一下这个工具的安装、配置以及使用。
-
+      这里以Mysql5.7、sonarqube7.0、sonar-scanner-cli-4.2.0.1873 windows为例。
+      
 2.说明： sonarqube8.0不支持mysql，如果需要用到mysql的朋友建议使用8.0以下版本，mysql版本只支持5.6以上。（如果版本不对请参照之前的mysql升级备份问题）
 
 3.下载sonarqube7.0
