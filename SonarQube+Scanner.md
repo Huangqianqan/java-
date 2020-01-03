@@ -44,7 +44,7 @@
 
 ![](https://github.com/Huangqianqan/java-/blob/master/photo/sonarqube/sonarMysql.jpg)
 
-7）、在浏览器输入 http://localhost:9000进行访问，用户名密码都是admin。
+7）、在浏览器输入 http://localhost:9000进行访问，  用户名密码都是admin。
 第一次登录会看到 Tutorial，按照提示设置用于验证身份的token。生成的 token需要复制记下来(保存下来生成的是MD5 token)！不会再显示第二次！ 在 用户 > 我的账户 > 安全 中可以生成新token（令牌），或者回收已创建的 token。
 
 如果想强化安全，不想在执行代码扫描或调用Web Service时使用真实SonarQube用户的密码，可以使用用户令牌来代替用户登录。这样可以通过避免把分析用户的密码在网络传输，从而提升安全性。
@@ -53,9 +53,9 @@
 1）、将下载好的文件 sonar-scanner-cli-4.2.0.1873-windows.zip解压到任意目录。
 2）、配置windows系统环境变量
 
-![](https://github.com/Huangqianqan/java-/blob/master/photo/sonarqube/05.jpg)
+![](https://github.com/Huangqianqan/java-/blob/master/photo/sonarqube/05.png)
 
-![](https://github.com/Huangqianqan/java-/blob/master/photo/sonarqube/06.jpg)
+![](https://github.com/Huangqianqan/java-/blob/master/photo/sonarqube/06.png)
 
 3）、添加扫描的项目，window+r打开cmd，到需要扫描的项目下执行命令
 指定项目目录
@@ -123,23 +123,24 @@
 6）设置成功后，启动sonarqube服务，并启动cmd 输入sonar-scanner,分析成功后会出现下图
   
   ![](https://github.com/Huangqianqan/java-/blob/master/photo/sonarqube/04.jpg)
- 
- 7)打开http://localhost:9000/，我们会看到主页出现了分析项目的概要图  
   
-    ![](https://github.com/Huangqianqan/java-/blob/master/photo/sonarqube/bug.jpg)
+7)打开http://localhost:9000  我们会看到主页出现了分析项目的概要图  
+  
+![](https://github.com/Huangqianqan/java-/blob/master/photo/sonarqube/bug.jpg)
+
      
-     点击我们的项目，就会看到此项目分析结果，选择bugs，可以看到问题bug列表
+点击我们的项目，就会看到此项目分析结果，选择bugs，可以看到问题bug列表
       
-     ![](https://github.com/Huangqianqan/java-/blob/master/photo/sonarqube/bug1.jpg)
+![](https://github.com/Huangqianqan/java-/blob/master/photo/sonarqube/bug1.jpg)
      
-     ![](https://github.com/Huangqianqan/java-/blob/master/photo/sonarqube/bug0.jpg)
+![](https://github.com/Huangqianqan/java-/blob/master/photo/sonarqube/bug0.jpg)
       
-     选择一个bug，点击，能看到具体的代码。看到数字“+2”，说明引起该问题原因是“1”，会发生问题的是“2”，
-     找到数字对应的代码，并进行分析改进。
+选择一个bug，点击，能看到具体的代码。看到数字“+2”，说明引起该问题原因是“1”，会发生问题的是“2”，
+找到数字对应的代码，并进行分析改进。
      
-      ![](https://github.com/Huangqianqan/java-/blob/master/photo/sonarqube/bug2.jpg)
+![](https://github.com/Huangqianqan/java-/blob/master/photo/sonarqube/bug2.jpg)
       
-      ![](https://github.com/Huangqianqan/java-/blob/master/photo/sonarqube/bug3.jpg)
+![](https://github.com/Huangqianqan/java-/blob/master/photo/sonarqube/bug3.jpg)
       
 3、汉化
 
@@ -148,12 +149,11 @@
 只需要等提示框消失后页面就已经显示中文了。
 
     
-    
   最后终结几点：
     1：在安装sonarqube时一定先查看自己的mysql是不是5.6以上版本。如果用mysql数据库下载的sonarqube版本不能为8.0版。mysql版本问题参见mysql版本升级
     2：在安装后启动sonarqube时也许会报错，自动关闭，出现这样问题多数是mysql数据库问题，
         首先：查看数据库版本是否正确。
-        其次：进入sonarqube安装目录中logs打开web.log文本文档日志，查看错误地方，一般会有Can not connect to database~~不能连接数据库。
+        其次：进入sonarqube安装目录中logs打开web.log文本文档日志，查看错误地方，一般会有Can not connect to database不能连接数据库。
         （我电脑中的mysql版本比较低后面重新下载安装了mysql由于跟之前的密码不同，sonarqube-7.0\conf\sonar.properties中的配置没改，其中需要注意的是数据库用户名，密码是否能对应，
           数据库是否创建好。）
         最后：需要分析的项目根目录下创建的sonar-project.properties文件中 projectName项目名字，sources源文件所在的目录，binaries：class文件所在的目录。这些地方是否正确
