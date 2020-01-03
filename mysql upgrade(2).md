@@ -5,39 +5,40 @@
 第三步：运行MySQL的卸载程序，可以使用360或者QQ电脑管理的软件管理，或者是控制面板程序里面执行卸载。
 
 第四步：进入mysql官网 https://dev.mysql.com/downloads/installer/ 选择下载：mysql-installer-community-5.7.20.0.msi
-![](https://github.com/Huangqianqan/java-/blob/master/photograph/1256341-20171119151350827-838808899.png)
+
+![](https://github.com/Huangqianqan/java-/blob/master/photo/mysql%20upgrade(2)/1.png)
 
 第五步：选择custom安装server：
 
-
+![](https://github.com/Huangqianqan/java-/blob/master/photo/mysql%20upgrade(2)/2.png)
 
 第六步：根据自己系统选择：
 
-
+![](https://github.com/Huangqianqan/java-/blob/master/photo/mysql%20upgrade(2)/3.png)
 
 第七步：取消“Development Components”的勾选（因为我们只需要安装mysql server）
 
-
+![](https://github.com/Huangqianqan/java-/blob/master/photo/mysql%20upgrade(2)/4.png)
 
 第八步：按提示点击 Execute 安装
 
-
+![](https://github.com/Huangqianqan/java-/blob/master/photo/mysql%20upgrade(2)/5.png)
 
 第九步：安装mysql server
 
-
+![](https://github.com/Huangqianqan/java-/blob/master/photo/mysql%20upgrade(2)/6.png)
 
 第十步：Config Type选择“Development Machine”
 
-
+![](https://github.com/Huangqianqan/java-/blob/master/photo/mysql%20upgrade(2)/7.png)
 
 第十一步：设置root密码后，这里我取消了开机启动
 
-
+![](https://github.com/Huangqianqan/java-/blob/master/photo/mysql%20upgrade(2)/8.png)
 
 第十二步：点击“Execute”，等待完成就可以了
 
-
+![](https://github.com/Huangqianqan/java-/blob/master/photo/mysql%20upgrade(2)/9.png)
 
 第十三步：点击finish，后面的update Catalog可以忽略。使用 HeidiSQL 测试连接即可。
 
@@ -45,6 +46,5 @@
 
 第十五步：现在启动MySQL5.7，会发现启动失败。在开始菜单里面找到MySQL Install - Community，打开始是如下的界面，执行一下Reconfigure即可。
 
+![](https://github.com/Huangqianqan/java-/blob/master/photo/mysql%20upgrade(2)/MySQL-Install-configure.png)
 
-
-点赞
