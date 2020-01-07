@@ -13,8 +13,8 @@
   a、最新版官网地址：https://docs.sonarqube.org/latest/analysis/scan/sonarscanner/
  
 5.安装
-  1).安装sonarqube，在任意目录下解压sonarqube-7.0.zip
-    a).进入conf目录的 sonar.properties 修改相应配置，这里我使用的是mysql5.7，
+1).安装sonarqube，在任意目录下解压sonarqube-7.0.zip
+a).进入conf目录的 sonar.properties 修改相应配置，这里我使用的是mysql5.7，
      在启动前需要新建 sonar 数据库，否则会启动失败，因为在启动的时候会默认去创建所需的表结构
       
     #此处的账号密码根据自己的数据库来设定，
@@ -26,46 +26,46 @@
     #配置web端口
     sonar.web.port=9000
     
- ![](https://github.com/Huangqianqan/java-/blob/master/photo/sonarqube/01.png)
+![](https://github.com/Huangqianqan/java-/blob/master/photo/sonarqube/01.png)
   
- ![](https://github.com/Huangqianqan/java-/blob/master/photo/sonarqube/02.png)
+![](https://github.com/Huangqianqan/java-/blob/master/photo/sonarqube/02.png)
 
-   b）、确保jdk的环境变量已经配置完成，否则需要到wrapper.conf文件中指定启动的配置
+b）、确保jdk的环境变量已经配置完成，否则需要到wrapper.conf文件中指定启动的配置
 
-   c）、配置修改完成后，到bin目录下启动服务，此处我选择的是：sonarqube-7.0\bin\windows-x86-64\StartSonar.bat启动
+c）、配置修改完成后，到bin目录下启动服务，此处我选择的是：sonarqube-7.0\bin\windows-x86-64\StartSonar.bat启动
 
 
 
 第一次启动有点慢，会去插入表
-   d）、出现以下画面说明启动成功
+d）、出现以下画面说明启动成功
 
 ![](https://github.com/Huangqianqan/java-/blob/master/photo/sonarqube/03.png)
 
-   e）、等数据库表都创建成功就可以正常访问了
+e）、等数据库表都创建成功就可以正常访问了
 
 ![](https://github.com/Huangqianqan/java-/blob/master/photo/sonarqube/sonarMysql.jpg)
 
-   f）、在浏览器输入 http://localhost:9000进行访问，  用户名密码都是admin。
+f）、在浏览器输入 http://localhost:9000进行访问，  用户名密码都是admin。
 第一次登录会看到 Tutorial，按照提示设置用于验证身份的token。生成的 token需要复制记下来(保存下来生成的是MD5 token)！不会再显示第二次！ 在 用户 > 我的账户 > 安全 中可以生成新token（令牌），或者回收已创建的 token。
 
 如果想强化安全，不想在执行代码扫描或调用Web Service时使用真实SonarQube用户的密码，可以使用用户令牌来代替用户登录。这样可以通过避免把分析用户的密码在网络传输，从而提升安全性。
 2)、安装scanner
 
-  a）、将下载好的文件 sonar-scanner-cli-4.2.0.1873-windows.zip解压到任意目录。
-  b）、配置windows系统环境变量
+a）、将下载好的文件 sonar-scanner-cli-4.2.0.1873-windows.zip解压到任意目录。
+b）、配置windows系统环境变量
 
 ![](https://github.com/Huangqianqan/java-/blob/master/photo/sonarqube/05.png)
 
 ![](https://github.com/Huangqianqan/java-/blob/master/photo/sonarqube/06.png)
 
-  c）、添加扫描的项目，window+r打开cmd，到需要扫描的项目下执行命令
+c）、添加扫描的项目，window+r打开cmd，到需要扫描的项目下执行命令
 指定项目目录
 
 
 说明项目扫描完成，在页面管理端就可看到项目的分析报告了
-  d）、如需重新扫描项目，重新执行上一步骤即可
+d）、如需重新扫描项目，重新执行上一步骤即可
 
-  e）、
+e）、
    1)当然，每次执行那么长一条命令让人困惑，这里可以在scanner的conf目录下修改配置文件 sonar-scanner.properties
 
     # your authentication token
@@ -90,7 +90,7 @@
     # 不设置则默认分析多种语言
     sonar.language = js
 
-  2).也可以 打开要进行代码分析的项目根目录，新建sonar-project.properties文件
+2).也可以 打开要进行代码分析的项目根目录，新建sonar-project.properties文件
     输入一下信息
       # must be unique in a given SonarQube instance
  
@@ -121,11 +121,11 @@
       sonar.sourceEncoding=UTF-8
 其中：projectName是项目名字，sources是源文件所在的目录，binaries是class文件所在的目录
 
-  f）设置成功后，启动sonarqube服务，并启动cmd 输入sonar-scanner,分析成功后会出现下图
+f）设置成功后，启动sonarqube服务，并启动cmd 输入sonar-scanner,分析成功后会出现下图
   
 ![](https://github.com/Huangqianqan/java-/blob/master/photo/sonarqube/04.jpg)
   
-  g)打开http://localhost:9000  我们会看到主页出现了分析项目的概要图  
+g)打开http://localhost:9000  我们会看到主页出现了分析项目的概要图  
   
 ![](https://github.com/Huangqianqan/java-/blob/master/photo/sonarqube/bug.jpg)
 
